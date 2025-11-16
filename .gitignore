@@ -2,6 +2,13 @@
 node_modules/
 package-lock.json
 
+# Build output
+dist/
+*.tsbuildinfo
+
+# Legacy files (kept for reference only)
+index.js
+
 # Environment variables
 .env
 .env.local
