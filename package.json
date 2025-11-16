@@ -1,9 +1,28 @@
 {
   "name": "spotify-preview-finder",
-  "version": "2.1.0",
-  "description": "Get Spotify song preview URLs along with song details. Now supports searching by song name and artist for improved accuracy.",
-  "main": "index.js",
-  "scripts": {},
+  "version": "3.0.0",
+  "description": "Get Spotify song preview URLs along with song details. Now supports searching by song name and artist for improved accuracy. Modern TypeScript module with full type support.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage",
+    "prepublishOnly": "npm run build",
+    "clean": "rm -rf dist",
+    "dev": "tsx src/index.ts"
+  },
   "keywords": [
     "spotify",
     "preview",
@@ -12,7 +31,10 @@
     "stream",
     "preview-url",
     "artist",
-    "search"
+    "search",
+    "typescript",
+    "esm",
+    "module"
   ],
   "author": "Lakshay",
   "license": "MIT",
@@ -22,11 +44,28 @@
     "dotenv": "^16.4.5",
     "spotify-web-api-node": "^5.0.2"
   },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.35",
+    "@types/node": "^24.10.1",
+    "@types/spotify-web-api-node": "^5.0.11",
+    "@vitest/ui": "^4.0.9",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.9"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lakshay007/spot.git"
   },
   "bugs": {
     "url": "https://github.com/lakshay007/spot/issues"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
   }
 }
