@@ -6,6 +6,9 @@ package-lock.json
 dist/
 *.tsbuildinfo
 
+# Legacy files (kept for reference only)
+index.js
+
 # Environment variables
 .env
 .env.local
