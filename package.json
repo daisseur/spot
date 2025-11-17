@@ -1,5 +1,5 @@
 {
-  "name": "spotify-preview-finder",
+  "name": "spotify-find-preview",
   "version": "3.0.0",
   "description": "Get Spotify song preview URLs along with song details. Now supports searching by song name and artist for improved accuracy. Modern TypeScript module with full type support.",
   "main": "./dist/index.js",
