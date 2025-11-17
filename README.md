@@ -1,4 +1,4 @@
-# spotify-preview-finder
+# spotify-find-preview
 
 Get Spotify song preview URLs along with song details. This package helps you find preview URLs for Spotify songs, which can be useful when the official preview URLs are not available.
 
@@ -16,9 +16,16 @@ Get Spotify song preview URLs along with song details. This package helps you fi
 
 ## Installation
 
+> npm
 ```bash
-npm install spotify-preview-finder dotenv
+npm install spotify-find-preview dotenv
 ```
+
+> pnpm
+```bash
+pnpm install spotify-find-preview dotenv
+```
+
 
 ## Quick Start
 
@@ -26,7 +33,7 @@ npm install spotify-preview-finder dotenv
 
 ```javascript
 require('dotenv').config();
-const spotifyPreviewFinder = require('spotify-preview-finder');
+const spotifyPreviewFinder = require('spotify-find-preview');
 
 async function example() {
   const result = await spotifyPreviewFinder('Shape of You', 'Ed Sheeran');
@@ -43,7 +50,7 @@ example();
 ### TypeScript / ES Modules
 
 ```typescript
-import { searchAndGetLinks, type SearchResult } from 'spotify-preview-finder';
+import { searchAndGetLinks, type SearchResult } from 'spotify-find-preview';
 
 async function example() {
   const result: SearchResult = await searchAndGetLinks('Shape of You', 'Ed Sheeran');
@@ -64,7 +71,7 @@ example();
 ### 1. Basic Search (Song Name Only)
 
 ```typescript
-import { searchAndGetLinks } from 'spotify-preview-finder';
+import { searchAndGetLinks } from 'spotify-find-preview';
 
 async function basicSearch() {
   // Search by song name only (limit is optional, default is 5)
@@ -93,7 +100,7 @@ async function basicSearch() {
 For more accurate results, include the artist name:
 
 ```typescript
-import { searchAndGetLinks, type TrackInfo } from 'spotify-preview-finder';
+import { searchAndGetLinks, type TrackInfo } from 'spotify-find-preview';
 
 async function enhancedSearch() {
   // Search with both song name and artist for higher accuracy
@@ -117,7 +124,7 @@ async function enhancedSearch() {
 ### 3. Batch Search with Different Artists
 
 ```typescript
-import { searchAndGetLinks } from 'spotify-preview-finder';
+import { searchAndGetLinks } from 'spotify-find-preview';
 
 async function batchSearch() {
   const searches = [
@@ -161,7 +168,7 @@ This package is written in TypeScript and provides full type definitions.
 ### Available Types
 
 ```typescript
-import type { SearchResult, TrackInfo } from 'spotify-preview-finder';
+import type { SearchResult, TrackInfo } from 'spotify-find-preview';
 
 // SearchResult type
 interface SearchResult {
@@ -187,7 +194,7 @@ interface TrackInfo {
 ### Type-Safe Usage
 
 ```typescript
-import { searchAndGetLinks, type SearchResult, type TrackInfo } from 'spotify-preview-finder';
+import { searchAndGetLinks, type SearchResult, type TrackInfo } from 'spotify-find-preview';
 
 async function typeSafeExample() {
   const result: SearchResult = await searchAndGetLinks('Test Song', 'Test Artist');
@@ -361,5 +368,5 @@ daisseur (orignal repo by lakshay00)
 ## Links
 
 - [GitHub Repository](https://github.com/lakshay007/spot)
-- [npm Package](https://www.npmjs.com/package/spotify-preview-finder)
+- [npm Package](https://www.npmjs.com/package/spotify-find-preview)
 - [Spotify Web API](https://developer.spotify.com/documentation/web-api/)
