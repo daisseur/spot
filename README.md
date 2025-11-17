@@ -36,7 +36,7 @@ require('dotenv').config();
 const spotifyPreviewFinder = require('spotify-find-preview');
 
 async function example() {
-  const result = await spotifyPreviewFinder('Shape of You', 'Ed Sheeran');
+  const result = await spotifyPreviewFinder.searchAndGetLinks('Shape of You', 'Ed Sheeran');
   
   if (result.success) {
     console.log(result.results[0].name);
