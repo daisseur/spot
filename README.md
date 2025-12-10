@@ -2,7 +2,8 @@
 
 Get Spotify song preview URLs along with song details. This package helps you find preview URLs for Spotify songs, which can be useful when the official preview URLs are not available.
 
-**Now with full TypeScript support and modern ES Module syntax!** 🎉
+**With full TypeScript support and modern ES Module syntax** 
+> Check a example [here on my website MusiqueDuJour](https://music.daisseur.xyz/user/I7xr7ujgPKRfN1ZuXGgBUgUNhUkvRvgp)
 
 ## Features
 
